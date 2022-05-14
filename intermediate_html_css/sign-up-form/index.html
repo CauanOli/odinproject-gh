@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./images/checkbox.svg" type="image/x-icon">
+    <title>Sign-up Form</title>
+</head>
+<body>
+    <a href="../../index.html" class="back--button--all" style="position: fixed; top: 80%; left: 10px; width: 48px; height: 48px; opacity: 80%;"><svg style="width:48px;height:48px" viewBox="0 0 24 24">
+        <path fill="black" d="M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M18,11H10L13.5,7.5L12.08,6.08L6.16,12L12.08,17.92L13.5,16.5L10,13H18V11Z" />
+    </svg></a>
+    <section class="logo-section">
+            <div class="logo">
+                <h1>BIRDS</h1>
+            </div>
+    </section>
+    
+    <section class="form-section">
+        <div class="container">
+            <div class="description">
+                <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium qui voluptates consequatur suscipit libero deleniti, placeat, amet id, est iure iusto ducimus adipisci? Placeat qui velit officia dolores accusantium?</p>
+                <p class="description__text">Lorem, ipsum.</p>
+            </div>
+            
+            <div class="form-container">
+                <h2 class="form__title">Let's do this!</h2>
+                <form action="./index.json" method="post" id="account-creation">
+                    <label for="first-name">
+                        FIRST NAME
+                    <input type="text" name="first-name" id="first-name" placeholder="Birdo" required>
+                    </label>
+
+                    <label for="last-name">
+                        LAST NAME
+                    <input type="text" name="last-name" id="last-name" placeholder="Waldo">
+                    </label>
+
+                    <label for="email">
+                        EMAIL
+                    <input type="email" name="email" id="email" placeholder="youremail@mail.com" required>
+                    </label>
+
+                    <label for="phone">
+                        PHONE NUMBER
+                    <input type="text" name="phone" id="phone" placeholder="+CC (55)5555555" pattern="(\+\d{2} (\(\d{2}\))(\d{8})?)" required>
+                    </label>
+                    
+                    <label for="passwd">
+                        PASSWORD
+                    <input type="password" name="passwd" id="passwd" minlength="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least 8 characters, one number, uppercase and lowercase letter, ">
+                    </label>
+
+                    
+                    <label for="confirm-paswd">CONFIRM PASSWORD
+                        <input type="password" name="confirm-passwd" minlength="8" id="confirm-passwd" required>
+                    </label>
+                </form>
+                <button type="submit" form="account-creation">Create account</button>
+            </div>
+
+            <div class="login">
+                <p>Already have an account? <a href="#">Log in.</a></p>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

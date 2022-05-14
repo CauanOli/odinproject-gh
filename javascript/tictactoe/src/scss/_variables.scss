@@ -1,0 +1,22 @@
+body {
+  --highlight: #8980F5;
+  --primary: #69D1C5;
+  --light: #F8FAFC;
+  --dark: #18181B;
+  --medium: #D1D5DB;  
+  &.win {
+  --primary: #8980F5;
+  --highlight: #69D1C5;
+  --light: #F8FAFC;
+  --dark: #18181B;
+  --medium: #D1D5DB;
+}
+}
+
+
+$highlight: var(--highlight);
+$primary: var(--primary);
+$light: var(--light);
+$dark: var(--dark);
+$medium: var(--medium);
+$border4: 2px solid var(--dark);

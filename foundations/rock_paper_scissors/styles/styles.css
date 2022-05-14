@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+}
+
+html{
+    cursor: url('../images/cursor_two.PNG'), auto;
+}
+body{
+    font-family: 'Patrick Hand', cursive;
+    background-color: #5e81ac;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.buttons_main{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    padding: 5em;
+    background-color: #eceff4;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.placar_results{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #d8dee9;
+    color: #3b4252;
+    border-radius: 0 0 2rem 2rem;
+}
+
+
+button{
+    border: none;
+    display: block;
+    background-color: #d8dee9;
+    padding: 8em;
+    border-radius: 2rem;
+    cursor: url('../images/cursor_one.PNG'), auto;
+}
+
+button+button{
+    margin-left: 1rem;
+}
+
+button:hover{
+    background-color: #5e81ac;
+}
+img{
+    display: block;
+    width: 48px;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #eceff4;
+    border-radius: 1.29rem;
+    color: #3b4252;
+    border: 8px solid #5e81ac;
+    transform: translate(-50%, -50%);
+    padding: 2rem 5rem;
+    height: 80%;
+    width: 80%;
+    display: none;
+}
+
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.modal_p{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.modal_b{
+    padding: 2rem 5rem;
+    margin: 0;
+}

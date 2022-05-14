@@ -1,0 +1,16 @@
+img{
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}

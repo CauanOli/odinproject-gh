@@ -1,0 +1,42 @@
+.start {
+  @include modal;
+  .players {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.4rem;
+    outline: none;
+    border: none;
+  }
+  
+  button {
+    align-self: center; 
+  }
+ 
+  label {
+    font-size: 1.4rem;
+  }
+}
+
+#overlay {
+  position: fixed;
+  background-color: rgba(0,0,0, .7);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

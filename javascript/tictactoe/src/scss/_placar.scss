@@ -1,0 +1,25 @@
+.placar {
+  @include modal;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+
+  .player-placar {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  div {
+    text-align: center;
+  }
+  .winner-congrats {
+    padding: 5rem;
+    font-size: 1.5rem;
+  }
+  
+  &:hover {
+    background-color: $medium;
+    cursor: pointer;
+  }
+
+}

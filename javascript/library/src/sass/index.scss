@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'main';
+@import 'mixins';
+@import 'modal';
+@import 'header';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light;
+  color: $dark;
+}
+
+button:not(.close) {
+  @include button($primary);
+}

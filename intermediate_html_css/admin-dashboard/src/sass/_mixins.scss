@@ -1,0 +1,37 @@
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+    grid-area: none;
+  }
+  
+  header {
+    width: 100vw;
+    
+    .button--action {
+      width: 100%;
+      flex-direction: column;
+      
+      button {
+        width: 100%;
+        margin-top: 4px;
+      }
+    }
+  }
+      
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+    
+}
+
+@mixin card {
+  background-color: $light;
+  border-left: 8px solid $yellow;
+  border-radius: 0.5rem;
+  padding:  2rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  box-shadow: 2px 2px 8px rgba(0,0,0,30%);
+}

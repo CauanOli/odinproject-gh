@@ -1,0 +1,22 @@
+@media (min-width: 800px) {
+  
+}
+
+@mixin button($color) {
+  padding: 0.4rem 1.2rem;
+  margin-top: 1rem;
+  background-color: $color; 
+  color: $light;
+  border-radius: 2rem;
+  border: none;
+  
+  &:hover {
+    background-color: $highlight;
+    cursor: pointer;
+    scale: 0.98;
+  }
+  
+  &:active {
+    scale: 0.90;
+  }
+}

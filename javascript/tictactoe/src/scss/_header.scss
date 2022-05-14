@@ -1,0 +1,26 @@
+header {
+  background-color: $primary;
+  color: $light;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+  
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0,0,0,10%);
+  .titlebar {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-content: space-between;
+    transition: 200ms ease-in-out;
+    span {
+      margin-right: 0.5rem;
+    }
+    &.win {
+      background-color: $highlight;
+    }
+  }
+}

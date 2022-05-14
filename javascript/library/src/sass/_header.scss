@@ -1,0 +1,26 @@
+header {
+  background-color: $primary;
+  color: $light;
+  box-shadow: 0 2px 4px $dark;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding-right: 2rem;
+  .title {
+    display: flex;
+    padding: 1rem;
+    align-content: space-between;
+  }
+    
+  button.new-book--button {
+    background-color: $light;
+    color: $primary;
+
+    &:hover {
+      background-color: $dark;
+      color: $light;
+    }
+  }
+    
+}

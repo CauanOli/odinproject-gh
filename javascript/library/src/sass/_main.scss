@@ -1,0 +1,53 @@
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 4rem 1rem;
+  gap: 20px;
+}
+
+.card {
+  background-color: $light;
+  border-left: 4px solid $primary;
+  box-shadow: 2px 3px 5px $medium;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2rem;
+  
+  p.readed {
+    color: $primary;
+  }
+  
+  p.unreaded {
+    color: $medium;
+  }
+  
+  h2{
+    border-bottom: 1px solid $medium;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    color: $light;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    &:hover {
+      cursor: pointer;
+      scale: 0.93;
+  }
+    
+    &:active {
+      scale: 0.90;
+    }
+    
+  }
+}

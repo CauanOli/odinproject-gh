@@ -1,0 +1,115 @@
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+  color: $dark;
+
+  .searchbar {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 3fr 1fr;
+    gap: 0 3rem;
+    
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: $gray;
+      color: $light;
+      align-self: center;
+      justify-self: center;
+    }
+    
+    &--profile {
+      align-self: center;
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      
+      svg:hover {
+        cursor: pointer;
+        scale: 0.90;
+      }
+      
+      > * {
+        margin-right: 1rem;
+      }
+      img {
+        width: 48px;
+        border-radius: 100%;
+      }
+      
+      p {
+        font-weight: bold;
+      }
+    }
+    
+    &--bar {
+      display: flex;
+      align-items: center;
+      
+      svg {
+        margin-right: 1rem;
+      }
+    }
+ 
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 0rem 0 0.8rem 0;
+
+    .button--action {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+    }
+    
+    .user--profile {
+      display: flex;
+      padding: 0 2rem;
+      justify-items: center;
+      align-items: center;
+      
+      .profile--name {
+        
+        .user--name {
+          font-size: 1.4rem;
+          font-weight: 750;
+        }
+      }
+      
+      .profile--image {
+        margin-right: 1rem;
+      }
+    }
+  }
+  
+  .little {
+    font-size: 8pt;
+    font-weight: bold;
+  }
+  
+  img {
+    width: 80px;
+    border-radius: 100%;
+  }
+}
+
+button {
+  background-color: $primary;
+  border: 0;
+  border-radius: 2.8rem;
+  color: $light;
+  padding: 0.5rem 1.6rem;
+  margin-right: 2rem;
+  font-weight: bold;
+  
+  &:hover {
+    scale: 0.98;
+    cursor: pointer;
+  }
+}

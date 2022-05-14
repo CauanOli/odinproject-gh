@@ -1,0 +1,181 @@
+.library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 4rem 1rem;
+  gap: 20px;
+}
+
+.card {
+  background-color: #F8FAFC;
+  border-left: 4px solid #A855F7;
+  box-shadow: 2px 3px 5px #D1D5DB;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2rem;
+}
+.card p.readed {
+  color: #A855F7;
+}
+.card p.unreaded {
+  color: #D1D5DB;
+}
+.card h2 {
+  border-bottom: 1px solid #D1D5DB;
+  margin-bottom: 1rem;
+}
+.card button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #A855F7;
+  color: #F8FAFC;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card button:hover {
+  cursor: pointer;
+  scale: 0.93;
+}
+.card button:active {
+  scale: 0.9;
+}
+
+.modal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #18181B;
+  display: flex;
+  align-items: center;
+  background-color: #F8FAFC;
+  border-radius: 1rem;
+  width: 340px;
+  height: 440px;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto auto;
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.modal label input {
+  margin-top: 4px;
+  padding: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-radius: 0.7rem;
+  width: 100%;
+  border: none;
+  align-self: flex-start;
+  justify-self: flex-start;
+  color: #18181B;
+}
+.modal label input:focus:not([type=checkbox]) {
+  color: #A855F7;
+  box-shadow: none;
+  outline: none;
+  outline: 2px solid #A855F7;
+}
+.modal button.close {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  color: #D1D5DB;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 300px;
+}
+.modal button.close:hover {
+  color: #F59E0B;
+  cursor: pointer;
+}
+.modal button.close:active {
+  scale: 0.9;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+header {
+  background-color: #A855F7;
+  color: #F8FAFC;
+  box-shadow: 0 2px 4px #18181B;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+header .title {
+  display: flex;
+  padding: 1rem;
+  align-content: space-between;
+}
+header button.new-book--button {
+  background-color: #F8FAFC;
+  color: #A855F7;
+}
+header button.new-book--button:hover {
+  background-color: #18181B;
+  color: #F8FAFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #18181B;
+}
+
+button:not(.close) {
+  padding: 0.4rem 1.2rem;
+  margin-top: 1rem;
+  background-color: #A855F7;
+  color: #F8FAFC;
+  border-radius: 2rem;
+  border: none;
+}
+button:not(.close):hover {
+  background-color: #F59E0B;
+  cursor: pointer;
+  scale: 0.98;
+}
+button:not(.close):active {
+  scale: 0.9;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/bookshelf.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/index.css">
+  <title>Library</title>
+</head>
+<body>
+  <a href="../../index.html" class="back--button--all" style="position: fixed; top: 80%; left: 10px; width: 48px; height: 48px; opacity: 80%;"><svg style="width:48px;height:48px" viewBox="0 0 24 24">
+    <path fill="black" d="M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M18,11H10L13.5,7.5L12.08,6.08L6.16,12L12.08,17.92L13.5,16.5L10,13H18V11Z" />
+</svg></a>
+  <header>
+    <div class="title">
+      <img src="./images/bookshelf.png" alt="">
+      <h1>Library</h1>
+    </div>
+
+    <div class="new-book">
+      <button class="new-book--button">New Book</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="library">
+    </div>
+  </main>
+  
+  <div class="modal">
+    <button class="close">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+      </svg>
+    </button>
+    <form id="form" onsubmit="handleSubmit(event);">
+      <label for="name">
+        Book Name
+        <input type="text" name="name" id="name" placeholder="Book Name">
+      </label>
+      <label for="author">
+        Author
+        <input type="text" name="author" id="author" placeholder="Author">
+      </label>
+      
+      <label for="pages">
+        Pages
+        <input type="number" name="pages" id="pages" min="1" placeholder="Pages">
+      </label>
+      
+      <label for="read">
+        Readed?
+        <input type="checkbox" name="read" id="read">
+      </label>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <div id="overlay"></div>
+  
+  <script src="./src/js/main.js"></script>
+</body>
+</html>

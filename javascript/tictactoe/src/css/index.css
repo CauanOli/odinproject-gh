@@ -1,0 +1,225 @@
+body {
+  --highlight: #8980F5;
+  --primary: #69D1C5;
+  --light: #F8FAFC;
+  --dark: #18181B;
+  --medium: #D1D5DB;
+}
+body.win {
+  --primary: #8980F5;
+  --highlight: #69D1C5;
+  --light: #F8FAFC;
+  --dark: #18181B;
+  --medium: #D1D5DB;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--light);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header .titlebar {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-content: space-between;
+  transition: 200ms ease-in-out;
+}
+header .titlebar span {
+  margin-right: 0.5rem;
+}
+header .titlebar.win {
+  background-color: var(--highlight);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  background-color: var(--light);
+}
+
+.empty:hover {
+  cursor: pointer;
+  background-color: var(--medium);
+  color: var(--primary);
+}
+
+.start {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--light);
+  border: 0px solid var(--medium);
+  box-shadow: 2px 3px 5px var(--dark);
+  width: 440px;
+  height: 500px;
+  max-width: 100%;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10;
+}
+.start.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+  pointer-events: all;
+}
+.start .players {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
+}
+.start input {
+  width: 100%;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+}
+.start button {
+  align-self: center;
+}
+.start label {
+  font-size: 1.4rem;
+}
+
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.placar {
+  pointer-events: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary);
+  color: var(--light);
+  border: 0px solid var(--medium);
+  box-shadow: 2px 3px 5px var(--dark);
+  width: 440px;
+  height: 500px;
+  max-width: 100%;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.placar.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+  pointer-events: all;
+}
+.placar .player-placar {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.placar div {
+  text-align: center;
+}
+.placar .winner-congrats {
+  padding: 5rem;
+  font-size: 1.5rem;
+}
+.placar:hover {
+  background-color: var(--medium);
+  cursor: pointer;
+}
+
+button {
+  padding: 0.6rem 2rem;
+  background-color: var(--primary);
+  color: var(--light);
+  border: 2px solid var(--medium);
+  transition: 100ms ease-in-out;
+}
+button:hover {
+  background-color: var(--medium);
+  cursor: pointer;
+  scale: 0.94;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.gameboard {
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  user-select: none;
+  transition: 200ms ease-in-out;
+  border: 2px solid var(--dark);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--primary);
+}
+.gameboard p {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 100ms ease-in-out;
+}
+.gameboard p.row1 {
+  border-bottom: 2px solid var(--dark);
+}
+.gameboard p.column1 {
+  border-right: 2px solid var(--dark);
+}
+.gameboard p.column2 {
+  border-right: 2px solid var(--dark);
+}
+.gameboard p.row2 {
+  border-bottom: 2px solid var(--dark);
+}
+.gameboard p:not(.empty) {
+  font-size: 5rem;
+  color: var(--light);
+  text-orientation: upright;
+}
+.gameboard.win {
+  background-color: var(--highlight);
+}/*# sourceMappingURL=index.css.map */

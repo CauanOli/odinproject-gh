@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/pound-box.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/css/index.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <a href="../../index.html" class="back--button--all" style="position: fixed; top: 80%; left: 10px; width: 48px; height: 48px; opacity: 80%;"><svg style="width:48px;height:48px" viewBox="0 0 24 24">
+    <path fill="black" d="M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M18,11H10L13.5,7.5L12.08,6.08L6.16,12L12.08,17.92L13.5,16.5L10,13H18V11Z" />
+</svg></a>
+  <div class="container">
+  <header>
+    <h1 class="titlebar--playerOne">X</h1>
+    <div class="titlebar">
+      <span class="titlebar--image"><img src="./images/pound-box.png" alt=""></span>
+    <h1 class="titlebar--title">Tic Tac Toe</h1>
+    </div>
+    <h1 class="titlebar--playerTwo">O</h1>
+  </header>
+  
+  <main>
+    
+    <div class="gameboard innactive">
+      <p class="0 row1 column1"></p>
+      <p class="1 row1 column2"></p>
+      <p class="2 row1 column3"></p>
+      <p class="3 row2 column1"></p>
+      <p class="4 row2 column2"></p>
+      <p class="5 row2 column3"></p>
+      <p class="6 row3 column1"></p>
+      <p class="7 row3 column2"></p>
+      <p class="8 row3 column3"></p>
+    </div>
+    
+  </main>
+  </div>
+
+   <div class="start active">
+      <div class="players">
+        <div class="playerOne">
+          <label for="playerOne"><span>X</span> - Player One</label>
+          <input type="text" name="playerOne" id="playerOne" placeholder="Player Name" required>
+        </div>
+        <div class="playerTwo">
+          <label for="playerTwo"><span>O</span> - Player Two </label>
+          <input type="text" name="playerTwo" id="playerTwo" placeholder="Player Name" required>
+        </div>
+      </div>
+
+      <button class="start--button">
+        Start
+      </button>
+  </div>
+    
+  
+  <div class="placar">
+    <div class="player-placar">
+      <h2 class="playerOne-points"></h2>
+      <h2 class="playerTwo-points">></h2>
+    </div>
+    <div class="winner-congrats"></div>
+  </div>
+
+  <div id="overlay" class="active"></div>
+
+  <script src="./src/js/main.js"></script>
+</body>
+</html>
