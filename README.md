@@ -1,6 +1,8 @@
 # odin-project
 Odin-project
 
+[LIVE SERVER](https://cauanoli.github.io/odinproject-gh/)
+
 ## List of projects
 
 - Odin Recipes:
