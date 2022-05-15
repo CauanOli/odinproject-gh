@@ -53,6 +53,11 @@ a:hover {
     color: var(--dark);
     opacity: 80%;
     border-color: var(--primary);
+    scale: 0.98;
+}
+
+a:active {
+    scale: 0.80;
 }
 
 
