@@ -1,6 +1,6 @@
 # odin-project
 Odin-project
-
+[![](https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png)](https://github.com/user/repository/subscription)
 [LIVE SERVER](https://cauanoli.github.io/odinproject-gh/)
 
 ## List of projects
