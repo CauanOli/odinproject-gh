@@ -11,6 +11,7 @@
 
 body {
     background-color: var(--dark);
+    user-select: none;
 } 
 .container--all{
     display: grid;
@@ -35,7 +36,6 @@ ul {
 
 a {
     background-color: var(--dark);
-    user-select: none;
     text-decoration: none;
     width: 100%;
     height: 100%;
