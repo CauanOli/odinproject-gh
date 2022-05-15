@@ -9,6 +9,9 @@
     cursor: pointer;
     scale: 0.94;
   }
+  &:active {
+    scale: 0.90;
+  }
 }
   
 @mixin modal {

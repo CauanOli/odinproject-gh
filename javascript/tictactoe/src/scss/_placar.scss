@@ -20,6 +20,13 @@
   &:hover {
     background-color: $medium;
     cursor: pointer;
+    scale: 0.98;
   }
+  
+  &:active {
+    scale: 0.90;
+  }
+  
+  transition: 200ms ease-in-out;
 
 }
