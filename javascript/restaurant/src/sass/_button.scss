@@ -1,0 +1,44 @@
+
+button {
+  background-color: $primary;
+  color: $light;
+  border: none;
+  transition: 200ms ease-in-out;
+  height: 100%;
+  width: 100%;
+
+  &.active {
+    background-color: $dark;
+    border-top: 4px solid $primary;
+  }
+
+  &:hover {
+    background-color: $dark;
+    border-top: 4px solid $primary;
+    cursor: pointer;
+  }
+  
+  &:active {
+    background-color: $primary;
+    scale: 0.98;
+
+    @media (max-width: 800px) {
+      background-color: $light;
+      color: $dark;
+      scale: 0.90;
+    }
+  }
+}
+
+
+li {
+  height: 80%;
+  width: 100%;
+  
+  @media (min-width: 800px) {
+    width: 200px;
+  }
+  & + li {
+    margin-left: 4px;
+  }
+}
