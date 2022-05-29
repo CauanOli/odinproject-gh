@@ -1,0 +1,37 @@
+#new-card-button, #new-project-button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px $medium;
+  z-index: 1;
+  &:hover{
+    background-color: $light;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $light;
+  }
+
+  &:active {
+    scale: 0.95;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#new-card-button {
+  bottom: 150px;
+  right: 24px;
+}
+
+#new-project-button {
+  bottom: 200px;
+  right: 24px;
+}

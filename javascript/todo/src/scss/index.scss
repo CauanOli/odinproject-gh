@@ -1,0 +1,86 @@
+@import 'variables';
+@import 'header';
+@import 'nav';
+@import 'main';
+@import 'mixins';
+@import 'kanban';
+@import 'overview';
+@import 'project';
+@import 'form';
+@import 'new-buttons';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 80px 1fr;
+  border-radius: 12px;
+  border: 1px solid $light;
+  box-shadow: 2px 2px 4px $light;
+  height: 100%;
+  
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr;
+  }
+    button.kanban, button.all-button {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    box-shadow: 1px 1px 5px $medium;
+  }
+
+  button.kanban {
+    bottom: 50px;
+    right: 24px;
+  }
+
+  button.all-button {
+    bottom: 100px;
+    right: 24px;
+  }
+
+  .nav-list--projects {
+    button {
+      padding: 0 2rem;
+      text-align: center;
+      justify-items: center;
+      align-content: center;
+      justify-content: center !important;
+      overflow: hidden;
+      width: 120px;
+
+      &:active {
+        color: $highlight;
+      }
+    }
+  }
+
+  .cont {
+    transition: 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      margin-right: 1rem;
+    }
+  }
+}

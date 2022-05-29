@@ -1,0 +1,85 @@
+nav {
+  ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    .nav-list--projects{
+      button {
+        display: flex;
+        justify-content: left;
+      }
+    }
+    div {
+      display: grid;
+      grid-template-rows: 50px;
+      grid-auto-rows: 50px;
+      height: 100%;
+      width: 100%;
+    }
+    li {
+      color: $medium;
+      width: 100%;
+      height: 100%;
+      border: none;
+      width: 100%;
+    }
+    button {
+      border-radius: 12px;
+      background-color: white;
+      padding: 0 1rem;
+      width: 100%;
+      height: 100%;
+      border: none;
+
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 1px;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      
+      text-align: left;
+      align-content: center;
+      
+      &.active {
+        background-color: $light;
+        color: black !important;
+        svg {
+          color: $highlight;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light;
+      }
+      
+      &:active {
+        scale: 0.94;
+      }
+
+      span {
+        display: flex;
+      }
+    }
+  }
+}
+
+.cont {
+  transition: 200ms ease-in-out;
+  display: flex;
+}
+
+*:not(h1) {
+  color: gray;
+}
+
+h1 {
+  color: black;
+}
+
+h3 {
+  font-size: 0.8rem;
+}

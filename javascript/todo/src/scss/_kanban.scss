@@ -1,0 +1,36 @@
+main.kanban {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 320px;
+  grid-auto-columns: 320px;
+  gap: 20px;
+  overflow: scroll;
+
+  .board {
+    background-color: $light;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    overflow: scroll;
+
+    h3 {
+      padding: 0.2rem;
+      color: black;
+    }
+
+    .card {
+        @include card();
+
+        #card--tags {
+          height: 32px;
+        }
+    }
+  }
+}
+
+.dragging {
+  cursor: pointer;
+  opacity: 0.8;
+  scale: 0.95;
+}
+
