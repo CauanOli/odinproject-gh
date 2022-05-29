@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.calculator {
+    width: 25rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(136, 192, 208, 0.2);
+    border: 5px solid rgba(136, 192, 208, 0.2);
+    border-radius: 1.2rem;
+    box-shadow: 1px 1px 5px 2px rgba(136, 192, 208, 0.9);
+    display: flex;
+    justify-content: center;
+}
+
+.display {
+    width: 100%;
+    height: 6.5rem;
+    margin-bottom: 2.5rem;
+    background-color: rgba(136, 192, 208, 0.2);
+    border: 2px solid rgba(136, 192, 208, 0.1);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display p{
+    width: 20rem;
+    color: #3b4252;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.digits {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 3rem;
+}
+
+.digits button {
+    width: 5rem;
+    height: 5rem;
+    margin: 0.1rem;
+    font-size: 2rem;
+    background-color:rgba(136, 192, 208, 0.2);
+    color: #3b4252;
+    border: 2px solid rgba(94, 129, 172, 0.8);
+    border-radius: 1.2rem;
+    box-shadow: 0px 0px 10px 1px rgba(136, 192, 208, 0.9);
+    text-justify: center;
+    text-align: center;
+}
+
+.digits button:hover {
+    cursor: pointer;
+    background-color: rgba(136, 192, 208, 0.1);
+    border: 2px solid rgba(94, 129, 172, 0);
+}
+
+.digits__column {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-items: center;
+}
+
+.operator {
+    background-color: rgba(136, 192, 208, 1) !important;
+}
+
+.operator:hover {
+    cursor: pointer;
+    background-color: rgba(136, 192, 208, 0.5) !important ;
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        width: 20rem;
+    }
+
+    .digits button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+        
+    .display p{
+        color: #3b4252;
+        width: 15rem;
+        font-size: 2.5rem;
+    }
+}
