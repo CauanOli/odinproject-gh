@@ -1,0 +1,34 @@
+.cards.weather{
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(300px, 1fr);
+  grid-auto-rows: minmax(300px, 1fr);
+  grid-template-columns: minmax(200px, 1fr);
+  grid-auto-columns: minmax(200px, 1fr);
+  grid-auto-flow: row;
+  justify-content: center;
+  gap: 10px 0;
+  overflow: scroll;
+  width: 100%;
+  padding: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  border: 2px solid $medium;
+  border-radius: 12px;
+  max-width: 100%;
+  .max-temp {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    text-transform: capitalize;
+  }
+}

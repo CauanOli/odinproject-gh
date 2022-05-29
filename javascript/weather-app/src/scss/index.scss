@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'searchBar';
+@import 'weatherContainer';
+@import 'dailyweather';
+@import 'currentweather';
+@import 'loading';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 4fr 1fr;
+  grid-template-columns: 1fr 4fr;
+
+  grid-template-areas:
+  "search search"
+  "hourly current"
+  "hourly current"
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-rows: 60px 1fr 2fr;
+    grid-template-areas:
+    "search search"
+    "hourly hourly"
+    "current current";
+  }
+
+  .cards.weather {
+    grid-auto-flow: column;
+    align-content: center;
+    gap: 0 10px;
+  }
+
+  .current-weather-container {
+    padding: 0.5rem;
+  }
+}
+
+
+.search {
+  grid-area: search;
+}
+
+.current-weather-container {
+  grid-area: current;
+}
+
+.daily-weather {
+  grid-area: daily;
+}
+
+.weather-container {
+  grid-area: hourly;
+}
+
+.background-image {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  contain: content;
+  filter: brightness(10%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+

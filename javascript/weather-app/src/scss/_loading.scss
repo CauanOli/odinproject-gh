@@ -1,0 +1,56 @@
+.loading {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .loading-bar {
+    scale: 0;
+  }
+}
+
+.loading.active {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loading-bar {
+    scale: 1;
+    path {
+      fill: $medium;
+    }
+    animation: loading 400ms infinite ease-in-out;
+  }
+
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
